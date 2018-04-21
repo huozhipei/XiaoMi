@@ -1,0 +1,25 @@
+#设置数据库编码格式
+set names utf8;
+#若存在xiaomi，则删除之，否则忽略
+drop database if exists xiaomi;
+#创建小米数据库
+create database xiaomi charset="utf8";
+#进入小米数据库
+use xiaomi;
+#创建创建小米数据库-用户表
+create table xiaomi_user(
+    uid  int not null PRIMARY KEY auto_increment,
+    uphone varchar(20),
+    uname varchar(30),
+    upwd  varchar(30),
+    user_name varchar(30),
+    avatar varchar(128)
+);
+insert into xiaomi_user values(
+    1,
+    15011898042,
+    "huozhipei",
+    "huozhipei520",
+    "霍志培",
+    "ddddd"
+)
